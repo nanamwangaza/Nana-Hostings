@@ -6,6 +6,11 @@
     --color-body:#918ca4;
 }
 
+*,*::after,*::before{
+    box-sizing: border-box;
+    /* gives the actual size of the element despite padding or border */
+}
+
 /* Typography */
 
 html{
@@ -153,4 +158,69 @@ white-space: nowrap;
     border-radius: 100%;
     justify-content: center;
     align-items: center;
+}
+
+/* Buttons */
+.btn{
+ font-size: 1.8rem;
+ font-weight: 600;
+ /* PS:600 not equal to 600px*/
+ padding: 2rem 3rem;
+ text-transform: uppercase;
+ border: 0;
+ /* border:0 removes the default border */
+ border-radius: 40px;
+ cursor: pointer;
+ /* added pointer as the cursor when we hover on the button */
+ white-space: nowrap;
+ /* text shouldn"t go to next line if space is not enough */
+ text-align: center;
+ margin: 1rem 0;
+ /* margin to separate btn from other elements */
+}
+
+.btn--primary{
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.btn--primary:hover{
+    background: #3a8ffd
+}
+
+.btn--secondary{
+    background: var(--color-secondary);
+    color: #fff;
+}
+.btn--secondary:hover{
+    background: #00c8eb;
+}
+.btn--accent{
+    background: var(--color-accent);
+    color: #fff;
+}
+.btn--accent:hover{
+    background: #ec3000;
+}
+.btn--outline{
+    background: #fff;
+    color: var(--color-headings);
+    border: 2px solid var(--color-headings);
+}
+
+.btn--outline:hover{
+ background: var(--color-headings);
+ color: #fff;
+}
+
+.btn--block{
+    width: 100%;
+    display: inline-block;
+    /* coz by default is inline for <a> so we wouldn't be able to apply width */
+}
+
+@media screen and (min-width:1024px){
+    .btn{
+        font-size: 1.5rem;
+    } 
 }
