@@ -270,7 +270,7 @@ color: #cdcbd7;
 }
 .card-container{
     /* temporary card container */
-    width: 30%;
+    width: 50%;
     padding: 4rem;
 }
 .card__header,
@@ -286,4 +286,53 @@ color: #cdcbd7;
 .card--secondary .card__header{
     background: var(--color-secondary);
     color: #fff;
+}
+
+.card--secondary .badge--secondary{
+    background: #02cdf1;
+    /* This for secondary badges in secondary cards..so that badge can be seen we change it's color */
+}
+
+/* Plans */
+
+.plan__name{
+    color: #fff;
+    font-weight: 500;
+    margin: 0;
+    font-size: 2.4rem;
+}
+.plan__price{
+    font-size: 6rem;
+}
+
+.plan__billing-cycle{
+    font-size: 2.4rem;
+    font-weight: 300;
+    opacity: 0.8;
+    /* opacity to make it softer */
+    margin-right: 1rem;
+}
+.plan__description{
+    font-size: 2rem;
+    font-weight: 300;
+    display: block;
+    letter-spacing: 0.1rem;
+}
+.plan .list__item{
+    margin-bottom: 2rem;
+}
+
+@media screen and (min-width:1024px){
+    .plan__name{
+        font-size: 1.4rem;
+    }
+    .plan__price{
+        font-size: 5rem;
+    }
+    .plan__billing-cycle{
+        font-size: 1.6rem;
+    }
+    .plan__description{
+        font-size: 1.7rem;
+    }
 }
