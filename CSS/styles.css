@@ -415,3 +415,30 @@ color: #cdcbd7;
         font-size: 1.4rem;
     }
 }
+
+/* Grids */
+.grid{
+    display: grid;
+}
+.gold{
+    background: gold;
+}
+.blue{
+    background: blue;
+}
+.red{
+    background: red;
+}
+@media screen and (min-width:768px) {
+    .grid--1x2{
+        grid-template-columns: repeat(2,1fr);
+        /* 2 columns each with 1fr */
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .grid--1x3{
+        grid-template-columns: repeat(3,1fr);
+        /* 3 columns each with 1fr */
+    }
+}
