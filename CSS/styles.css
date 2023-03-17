@@ -235,6 +235,11 @@ white-space: nowrap;
     /* coz by default is inline for <a> so we wouldn't be able to apply width */
 }
 
+.btn--stretched{
+    padding-left: 6rem;
+    padding-right: 6rem;
+    /* This is used in callouts  */
+}
 @media screen and (min-width:1024px){
     .btn{
         font-size: 1.5rem;
@@ -497,3 +502,43 @@ font-size: 2.4rem;
     margin-left: 6rem;
 }
 
+/* Callouts */
+.callout{
+    padding: 3rem;
+    border-radius: 5px;
+}
+.callout--primary{
+    background: var(--color-primary);
+    color: white;
+}
+.callout__content{
+    padding: 3rem;
+    text-align: center;
+}
+.callout__heading{
+    color: white;
+}
+
+.callout .btn{
+    justify-self: center;
+    align-self: center;
+    /* JUSTIFY-SELF is for horizontal alignment of A GRID ITEM(single item), align-self for vertical */
+    /* before alignment the button was so big. why??? */
+}
+
+@media screen and (min-width:768px){
+  
+    .callout .grid--1x2{
+        grid-template-columns: 1fr auto;
+        /* 1fr for content, then auto means that the button will fit the available space..sting like that */
+    }
+    .callout__content{
+        text-align: left;
+    }
+
+    .callout .btn{
+        justify-self: start;
+        /* for wider screens we want the button to be closer to the callout__content */
+        margin:0 2rem;
+    }
+}
