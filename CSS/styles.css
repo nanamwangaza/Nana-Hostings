@@ -150,6 +150,16 @@ white-space: nowrap;
     fill: var(--color-primary);
 }
 
+.icon--white{
+    fill: #fff;
+    /* for testimonial */
+}
+
+.icon--small{
+    width: 30px;
+    height: 30px;
+     /* for testimonial */
+}
 .icon-container{
     background: #f3f9fa;
     width: 64px;
@@ -159,6 +169,11 @@ white-space: nowrap;
     border-radius: 100%;
     justify-content: center;
     align-items: center;
+}
+
+.icon-container--accent{
+    background: var(--color-accent);
+    /* for testimonial icon */
 }
 
 /* Buttons */
@@ -269,6 +284,10 @@ color: #cdcbd7;
     overflow: hidden;
     /* in adding header color, the header becomes biger than card(overflows), so we hide overflow to resume the round corners of border radius */
 }
+ .card--testimonial{
+    overflow: visible;
+    /* for testimonial so that the icon isn't cut off in small screens */
+ }
 .card-container{
     /* temporary card container */
     width: 50%;
@@ -437,8 +456,44 @@ color: #cdcbd7;
 }
 
 @media screen and (min-width:1024px) {
-    .grid--1x3{
+    .grid--1{
         grid-template-columns: repeat(3,1fr);
         /* 3 columns each with 1fr */
     }
 }
+
+/* Testimonials */
+
+.testimonial{
+    padding: 3rem;
+}
+.testimonial__image {
+    position: relative;
+    /* so we can position the icon absolute */
+}
+
+.testimonial__image > .icon-container{
+    position: absolute;
+    top: 3rem;
+    right: -32px;
+    /* from icon size of 64px. We divided by 2 to get 32. then right:-32px so tat the icon stays in the middle of the image right edge */
+
+}
+.testimonial__image > img{
+    width: 100%;
+}
+
+@media screen and (min-width:768px) {
+    /* for tablets */
+
+}
+.testimonial .quote ,
+.testimonial .quote__author
+{
+font-size: 2.4rem;
+}
+
+.testimonial .quote{
+    margin-left: 6rem;
+}
+
