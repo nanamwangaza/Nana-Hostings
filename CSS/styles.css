@@ -542,3 +542,44 @@ font-size: 2.4rem;
         margin:0 2rem;
     }
 }
+/* Collapsibles */
+.collapsible__header{
+    display: flex;
+    justify-content: space-between;
+    /* creates space between heading and icon */
+    
+}
+.collapsible__heading{
+    margin-top: 0;
+    font-size: 3rem;
+}
+
+.collapsible__wordpress{
+    transform: rotate(-90deg);
+    transition: transform 0.3;
+}
+
+.collapsible__content{
+    /* display: none; */
+    max-height: 0;
+     /* for animating max-height when expanded */
+    /* when max-height's 0, there's overflow. so we hide the overflow as below. */
+    opacity: 0;
+    /* opacity for creating an animation when we uncollapse it  */
+    overflow: hidden;
+    transition: all 0.3s
+    /* transition for all things should take 0.3s, for here there's  max-height, opacity..when we collapse and uncollapse content */
+}
+
+.collapsible--expanded .collapsible__wordpress{
+    transform: rotate(0);
+    /* the icon shouldn't be rotated when collapsible's expanded */
+
+}
+.collapsible--expanded .collapsible__content{
+    /* display: block; */
+    /* content should display when expanded */
+    max-height: 100vh;
+    /* if we put height instead of max-height, it would take the entire page */
+    opacity: 1;
+}
