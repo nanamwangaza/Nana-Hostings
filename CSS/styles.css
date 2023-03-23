@@ -583,3 +583,46 @@ font-size: 2.4rem;
     /* if we put height instead of max-height, it would take the entire page */
     opacity: 1;
 }
+
+/* Blocks */
+.block{
+    --padding-vertical:6rem;
+    /* we defined a variable of padding-verticalso that we can be able to change ... */
+    /* border: 2px solid red; */
+    padding: var(--padding-vertical) 2rem;
+   
+   
+}
+.block__heading{
+    margin-top: 0;
+}
+.block--dark{
+    background-color: #000;
+    color: #7b858b;
+}
+.block--dark .block__heading{
+    color: #fff;
+}
+.block--skewed-right{
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+    /* got this from clip generator(clippy), in custom polygon */
+    /* x% y%, x% y%, ..... , sthing like x y coordinate points*/
+   padding-bottom: calc(var(--padding-vertical) + 4rem);
+   /* calc() is for adding the padding vertical with 4rem to make 10 rem for te skewed block */
+}
+.block--skewed-left{
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+    /* got this from clip generator(clippy), in custom polygon */
+    /* x% y%, x% y%, ..... , sthing like x y coordinate points*/
+   padding-bottom: calc(var(--padding-vertical) + 4rem);
+   /* calc() is for adding the padding vertical with 4rem to make 10 rem for te skewed block */
+}
+.block__header{
+    text-align: center;
+}
+.container{
+    max-width: 1140px;
+    /* content of this container shouldn't stretch more than 1140px */
+    margin: 0 auto;
+    /* for horizontal margin, if there's extra space, it will be equally distributed in each side */
+}
