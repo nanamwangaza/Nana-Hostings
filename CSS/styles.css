@@ -775,3 +775,25 @@ font-size: 2.4rem;
     margin: 0 auto;
 }
 
+/* Feature block */
+.feature{
+    gap: 4rem 2rem;
+    margin:12rem 0;
+}
+.feature__heading{
+    margin: 1rem 0;
+}
+.feature__image{
+    width: 100%;
+}
+
+@media screen and (min-width:768px){
+   .feature__content:nth-child(3){
+    order: 4;
+   }
+   /* we put the 3rd item in place of the 4th item and vice-versa */
+   .feature__content:nth-child(6){
+    order: 5;
+   }
+   /* Check out this approch by using ".feature:nth-of-type(even).feature__content{order:2}" */
+}
