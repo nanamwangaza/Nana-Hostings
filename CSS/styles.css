@@ -7,6 +7,11 @@
     --color-body-darker:#5c5577;
 }
 
+::selection{
+    background: var(--color-primary);
+    color: #fff;
+}
+
 *,*::after,*::before{
     box-sizing: border-box;
     /* gives the actual size of the element despite padding or border */
@@ -36,7 +41,7 @@ h2{
 }
 h3{
     font-size: 3rem;
-   
+    font-weight: 500;
 }
 p{
     margin-top: 0;
@@ -116,7 +121,6 @@ white-space: nowrap;
 /* Lists */
 .list{
     list-style: none;
-    color: var(--color-headings);
     padding-left: 0;
 }
 
@@ -130,6 +134,7 @@ white-space: nowrap;
     /* don't forget (../images/.....) */
     list-style-image: url(../images/tick.svg);
     padding-left: 3rem;
+    color: var(--color-headings);
 }
  .list--tick .list__item{
     padding-left: 0.5rem;
@@ -410,6 +415,7 @@ color: #cdcbd7;
 /* Media */
 .media{
     display: flex;
+    margin-bottom: 4rem;
 }
 .media__title{
     margin-top: 0;
@@ -624,18 +630,22 @@ font-size: 2.4rem;
     background-color: #000;
     color: #7b858b;
 }
-.block--dark .block__heading{
+.block--dark  
+ h1,
+ h2,
+ h3
+{
     color: #fff;
 }
 .block--skewed-right{
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
     /* got this from clip generator(clippy), in custom polygon */
     /* x% y%, x% y%, ..... , sthing like x y coordinate points*/
    padding-bottom: calc(var(--padding-vertical) + 4rem);
    /* calc() is for adding the padding vertical with 4rem to make 10 rem for te skewed block */
 }
 .block--skewed-left{
-    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
     /* got this from clip generator(clippy), in custom polygon */
     /* x% y%, x% y%, ..... , sthing like x y coordinate points*/
    padding-bottom: calc(var(--padding-vertical) + 4rem);
@@ -796,4 +806,21 @@ font-size: 2.4rem;
     order: 5;
    }
    /* Check out this approch by using ".feature:nth-of-type(even).feature__content{order:2}" */
+}
+
+
+/* Showcase block */
+.showcase__image{
+    width: 100%;
+}
+
+@media screen and (min-width:768px) {
+    .showcase__image{
+        width: auto;
+        max-width: 700px;
+        justify-self: end;
+    }
+   .showcase__media{
+    margin: 3rem 2rem;  
+   }
 }
