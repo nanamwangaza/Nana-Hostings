@@ -653,6 +653,7 @@ font-size: 2.4rem;
 }
 .block__header{
     text-align: center;
+    margin-bottom: 4rem;
 }
 .container{
     max-width: 1140px;
@@ -824,3 +825,74 @@ font-size: 2.4rem;
     margin: 3rem 2rem;  
    }
 }
+
+/* Testimonial block */
+.block-testimonial h2{
+color: var(--color-headings);
+/* did this coz of an emergency. The color wouldn't show that's why I did this. FIND THE PROBLEM THO!!!!! */
+}
+
+/* Footer */
+.footer{
+    background: #232323;
+}
+
+.footer__content{
+   padding: 2rem;
+   border-bottom: 1px solid #393939;
+}
+.footer__heading{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+ .footer__brand{
+    margin-top: 5rem;
+    text-align: center;
+ }
+ .footer__copyright{
+    font-size: 2.1rem;
+    color: #fff;
+    opacity: 0.3;
+ }
+ @media screen and (min-width:768px){
+
+    .footer__heading{
+        font-size: 1.6rem;
+    }
+    .footer__grid{
+        grid-template-columns: repeat(5,1fr);
+    }
+
+    .footer .collapsible__wordpress{
+        display: none;
+    }
+
+    .footer .collapsible__content{
+        opacity: 1;
+        max-height: 100%;
+    }
+
+    .footer__brand{
+        order: -1;
+        /* by default each item has the order of 0, so by putting order of -1 wwe place it before others */
+        margin-top: 1rem;
+    }
+    .footer__copyright{
+        font-size: 1.5rem;
+    }
+    .footer__content{
+        border: 0;
+    }
+    .footer a{
+        color: #777;
+        transition: color 0.3s;
+    }
+
+    .footer a:hover{
+        color: #fff;
+    }
+    .footer__brand img{
+        width: 100%;
+        /* TODO:Consider applying this to all images */
+    }
+ }
